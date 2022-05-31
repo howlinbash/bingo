@@ -1,9 +1,17 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import appReducer from "./appSlice";
+import ballsReducer from "./ballsSlice";
+import cardReducer from "./cardSlice";
+import chanceReducer from "./chanceSlice";
+import tilesReducer from "./tilesSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    app: appReducer,
+    balls: ballsReducer,
+    card: cardReducer,
+    chance: chanceReducer,
+    tiles: tilesReducer,
   },
 });
 
